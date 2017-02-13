@@ -1,0 +1,46 @@
+<!-- Form for add a new book. Made it with a Reactive Form -->
+
+<form  class="col s12"  novalidate (ngSubmit)="onSubmit(bookForm)" [formGroup]="bookForm" style="margin-left: 10px;" >
+  <div class="row">
+    <div class="input-field col s4">
+      <label for="book_title">Title</label>
+      <br>
+      <input placeholder="Title"  type="text" formControlName="title">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s3">
+      <label for="book_author">Author</label>
+      <br>
+      <input placeholder="Author"  type="text" formControlName="author">
+    </div>
+    <div class="input-field col s3">
+      <label for="book_isbn">ISBN</label>
+      <br>
+      <input placeholder="ISBN" formControlName="ISBN">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s4">
+      <label for="book_editorial">Editorial</label>
+      <br>
+      <input placeholder="Editorial"  type="text" formControlName="editorial">
+    </div>
+  </div>
+  <div class="row">
+        <div class="input-field col s6">
+            <label>Category</label>
+            <br>
+            <select style="display: block;" formControlName="category">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="Black soap">Black soap</option>
+              <option value="Horror novel">Horror novel</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Other">Other</option>
+            </select>
+        </div>
+  </div>
+  <div class="row">
+    <button class="waves-effect waves-light btn" type="submit">Guardar</button>
+  </div>
+</form>

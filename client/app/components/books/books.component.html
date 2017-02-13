@@ -1,0 +1,35 @@
+
+<h4 style="margin-left: 10px;">Here are the list of books...</h4>
+<!--
+<form action="">
+  <div class="row">
+    <div class="input-field col s4">
+      <label for="book_title">Title</label>
+      <br>
+      <input placeholder="Title" id="book_title" type="text" class="validate">
+    </div>
+  </div>
+  </div>
+</form>
+-->
+
+<div class="row">
+  <div class="books-list">
+      <div *ngFor="let book of books">
+        <div class="bookBox card  blue lighten-3 col s4" style="margin-right: 5px; margin-left: 5px;">
+          <div class="card-content">
+            <div class="col s6"><b>Title:</b> {{book.title}}</div> <br>
+            <div class="col s6"><b>Author:</b> {{book.author}}</div><br>
+            <div class="col s6"><b>ISBN</b>: {{book.ISBN}}</div><br>
+            <div class="col s6"><b>Editorial:</b> {{book.editorial}}</div><br>
+            <div class="col s6"><b>Category:</b> {{book.category}}</div><br>
+          </div>
+          <div class="card-action">
+            <button type="button" class="red darken-1 btn" (click)="deleteBook(book._id)" >Delete</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<h4 style="margin-left: 10px;">Add a new book</h4>
+<newbook-form></newbook-form>
